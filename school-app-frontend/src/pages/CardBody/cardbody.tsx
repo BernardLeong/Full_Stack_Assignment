@@ -9,6 +9,7 @@ import { Form } from '../../types/Form';
 import { FormErrors } from '../../types/FormErrors';
 import TeacherForm from '../../components/FormControl/TeacherForm.tsx';
 import ClassForm from '../../components/FormControl/ClassForm.tsx';
+import { API_BASE_URL } from '../../config';
 
 type CardBodyProps = {
   setActiveTab: React.Dispatch<React.SetStateAction<string>>;
@@ -40,7 +41,7 @@ const [errors, setErrors] = useState<FormErrors>({});
 
   const fetchTeachers = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/api/teachers');
+      const response = await axios.get(`${API_BASE_URL}/api/teachers`);
       console.log(response.data.data)
       setTeachers(response.data.data || []);
     } catch (error) {
@@ -52,7 +53,7 @@ const [errors, setErrors] = useState<FormErrors>({});
 
   const fetchClasses = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/api/classes');
+      const response = await axios.get(`${API_BASE_URL}/api/classes`);
       setClasses(response.data.data || []);
     } catch (error) {
       console.error('Error fetching classes:', error);
@@ -91,7 +92,7 @@ const [errors, setErrors] = useState<FormErrors>({});
 
     try {
       if (activeTab === 'Teachers') {
-        await axios.post('http://localhost:8080/api/teachers', {
+        await axios.post(`${API_BASE_URL}/api/teachers`, {
           name: formData.name,
           subject: formData.subject,
           email: formData.email,
@@ -99,7 +100,7 @@ const [errors, setErrors] = useState<FormErrors>({});
         })
         fetchTeachers()
       } else if (activeTab === 'Classes') {
-        await axios.post('http://localhost:8080/api/classes', {
+        await axios.post(`${API_BASE_URL}/api/classes`, {
           level: formData.level,
           name: formData.name,
           teacherEmail: formData.teacherEmail,
