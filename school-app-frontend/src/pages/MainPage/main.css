@@ -1,0 +1,20 @@
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 6fr 1fr;
+    /* gap: 10px;
+    padding: 20px; */
+  }
+  
+.item {
+    /* background-color: lightblue;
+    border: 1px solid black;
+    padding: 20px;
+    text-align: center; */
+}

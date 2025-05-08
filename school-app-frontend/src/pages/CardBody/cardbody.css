@@ -1,0 +1,114 @@
+.container-card {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100%;
+    padding: 48px;
+    background-color: #F9F9F9;
+  }
+  
+  .card-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 36px;
+    color: #333333;
+    margin-bottom: 24px;
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .teacher-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .add-button {
+    margin-top: 20px;
+    background-color: #135BB4;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .add-button:hover {
+    background-color: #104a
+  }  
+
+  .card-buttons {
+    margin-top: 24px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding-right: 48px; /* align nicely with card padding */
+  }
+  
+  .back-button {
+    background: #FFFFFF;
+    color: #135BB4;
+    border: 1px solid #135BB4;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+  }
+  
+  .back-button:hover {
+    background-color: #E3F2FD; /* Light blue hover effect */
+  }
+  
+  .submit-button {
+    background-color: #135BB4;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .submit-button:hover {
+    background-color: #104a92;
+  }
+
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .card-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: #333333;
+  }
+  
+  .add-button {
+    height: 36px;
+    text-transform: none; /* optional: to match Figma (no uppercase) */
+  }
+  
