@@ -9,7 +9,7 @@ import { Form } from '../../types/Form';
 import { FormErrors } from '../../types/FormErrors';
 import TeacherForm from '../../components/FormControl/TeacherForm.tsx';
 import ClassForm from '../../components/FormControl/ClassForm.tsx';
-import { API_BASE_URL } from '../../config';
+import { API_BASE_URL } from '../../config.ts';
 
 type CardBodyProps = {
   setActiveTab: React.Dispatch<React.SetStateAction<string>>;
