@@ -5,7 +5,7 @@ This repository contains a **full-stack school management mock application** con
 * `school-app-backend` – A TypeScript + Express API
 * `school-app-frontend` – A ReactJS frontend using Material UI
 
-The live version is deployed at: **[http://34.1.136.254:8080](http://34.1.136.254:8080)**
+The live version is deployed at: **[http://34.1.136.254:3000](http://34.1.136.254:3000)**
 
 ---
 
