@@ -71,13 +71,24 @@ const [errors, setErrors] = useState<FormErrors>({});
     if (e) e.preventDefault();
 
     let newErrors: any = {};
+    const digitCount = formData.contactNumber.replace(/\D/g, '').length;
+    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     if (activeTab === 'Teachers') {
       newErrors = {
         name: formData.name ? '' : 'Name is required',
         subject: formData.subject ? '' : 'Subject is required',
-        email: formData.email ? '' : 'Email is required',
-        contactNumber: formData.contactNumber ? '' : 'Contact number is required',
-      };
+        email: formData.email
+        ? isValidEmail.test(formData.email)
+          ? ''
+          : 'Email must be a valid address'
+        : 'Email is required',
+        contactNumber: formData.contactNumber
+        ? /^[\d+\-\s]+$/.test(formData.contactNumber) && digitCount <= 20
+          ? ''
+          : 'Contact number may include digits, +, - or spaces, and can contain up to 20 digits, no characters are allowed'
+        : 'Contact number is required',
+      };      
     } else if (activeTab === 'Classes') {
       newErrors = {
         level: formData.level ? '' : 'Level is required',
@@ -85,6 +96,7 @@ const [errors, setErrors] = useState<FormErrors>({});
         teacherEmail: formData.teacherEmail ? '' : 'Form Teacher is required',
       };
     }
+    
     setErrors(newErrors);
 
     const hasErrors = Object.values(newErrors).some(error => error !== '');
@@ -148,22 +160,26 @@ const [errors, setErrors] = useState<FormErrors>({});
     formTeacher: cls.formTeacher?.name || '',
   }));
 
+  const shouldShowAddButton =
+  !isAdding &&
+  ((activeTab === 'Teachers' && teachers.length > 0) ||
+   (activeTab === 'Classes' && classes.length > 0));
+
+
   return (
     <div className="container-card">
       <div className="card-header">
       <div className="card-title">{activeTab}</div>
-      {isAdding ? 
-      <></>: 
-      (  
-        <Button 
-          variant="contained" 
+      {shouldShowAddButton && (
+        <Button
+          variant="contained"
           color="primary"
           onClick={() => setIsAdding(true)}
           className="add-button"
         >
           + Add {activeTab}
-        </Button>)
-      }
+        </Button>
+      )}
       </div>
 
       <div className="card-body">
