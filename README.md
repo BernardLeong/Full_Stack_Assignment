@@ -2,8 +2,8 @@
 
 This repository contains a **full-stack school management mock application** consisting of two directories:
 
-* `backend` – A TypeScript + Express API
-* `frontend` – A ReactJS frontend using Material UI
+* `school-app-backend` – A TypeScript + Express API
+* `school-app-frontend` – A ReactJS frontend using Material UI
 
 The live version is deployed at: **[http://34.1.136.254:8080](http://34.1.136.254:8080)**
 
@@ -49,10 +49,10 @@ cd Full_Stack_Assignment
 
 ### 2. Backend Setup
 
-Navigate to the `backend` directory:
+Navigate to the `school-app-backend` directory:
 
 ```bash
-cd backend
+cd school-app-backend
 ```
 
 #### Create a `.env` file with the following content:
@@ -146,7 +146,7 @@ To change the backend URL, update `API_BASE_URL` in `school-app-frontend/src/con
 
 7. **No SSL**
 
-   * HTTP (not HTTPS) is used for local development and deployment; secure communication is not required for testing, also it is a matter of finacial cost on my part to get a personal domain.
+   * HTTP (not HTTPS) is used for local development and deployment; secure communication is not required for testing, also it is a matter of financial cost on my part to get a personal domain.
 
 7. **Local Development Environment**
 
@@ -174,7 +174,7 @@ Feel free to raise an issue or reach out directly if you encounter any setup pro
 
 ## ⚠️ Disclaimer
 
-Hosted VMs and MYSQL instance 30 days from now which is 9 June 2025
+Hosted VMs and MYSQL instance will be taken down 30 days from now which is tentatively 9 June 2025 (financial cost)
 
 
 ## 💡 Suggestions to make app better
