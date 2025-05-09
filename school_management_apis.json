@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "be8d2e2f-f1fe-46f4-b366-f80c509ad015",
+		"name": "School APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43152866"
+	},
+	"item": [
+		{
+			"name": "add Teachers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Lim\",\n    \"subject\": \"Physics\",\n    \"email\": \"lim@gmail.com\",\n    \"contactNumber\": \"99837273223\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://34.1.136.254:8080/api/teachers",
+					"protocol": "http",
+					"host": [
+						"34",
+						"1",
+						"136",
+						"254"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teachers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch teachers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://34.1.136.254:8080/api/teachers",
+					"protocol": "http",
+					"host": [
+						"34",
+						"1",
+						"136",
+						"254"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teachers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add Class",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"level\": \"Primary 1\",\n  \"name\": \"Class 1A\",\n  \"teacherEmail\": \"lim@gmail.com\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://34.1.136.254:8080/api/classes",
+					"protocol": "http",
+					"host": [
+						"34",
+						"1",
+						"136",
+						"254"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"classes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch Class",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://34.1.136.254:8080/api/classes",
+					"protocol": "http",
+					"host": [
+						"34",
+						"1",
+						"136",
+						"254"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"classes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
