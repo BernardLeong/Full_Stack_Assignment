@@ -95,10 +95,10 @@ npm run start
 
 ### 3. Frontend Setup
 
-Navigate to the `frontend` directory:
+Navigate to the `school-app-frontend` directory:
 
 ```bash
-cd ../frontend
+cd ../school-app-frontend
 ```
 
 #### Install dependencies:
